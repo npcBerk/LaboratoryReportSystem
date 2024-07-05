@@ -33,15 +33,16 @@
     ```properties
     spring.application.name=Laboratory Report System
 
-    spring.datasource.url=jdbc:postgresql://localhost:5432/laboratory
-    spring.datasource.username=postgres
-    spring.datasource.password=Password1
+    spring.datasource.url=jdbc:postgresql://localhost:5432/laboratory_report_system
+    spring.datasource.username=lab_user
+    spring.datasource.password=password
 
     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
     spring.jpa.hibernate.ddl-auto=update
     spring.jpa.show-sql=true
 
     spring.datasource.hikari.auto-commit=false
+
     ```
 
 4. **Bağımlılıkları Yükleyin ve Projeyi Derleyin**
