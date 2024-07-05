@@ -1,0 +1,459 @@
+### Create Report 1
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52315",
+  "patientId": "12345678901",
+  "diagnosisTitle": "Pnömotoraks",
+  "diagnosisDetails": "Sol akciğer lobunda pnömotoraks gözlendi.",
+  "reportDate": "2024-03-10",
+  "laborantHospitalId": "12345"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 2
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52316",
+  "patientId": "23456789012",
+  "diagnosisTitle": "Grip",
+  "diagnosisDetails": "Soğuk algınlığı belirtileri.",
+  "reportDate": "2024-03-11",
+  "laborantHospitalId": "23456"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 3
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52317",
+  "patientId": "34567890123",
+  "diagnosisTitle": "Alerji",
+  "diagnosisDetails": "Polen alerjisi belirtileri.",
+  "reportDate": "2024-03-12",
+  "laborantHospitalId": "34567"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 4
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52318",
+  "patientId": "45678901234",
+  "diagnosisTitle": "Astım",
+  "diagnosisDetails": "Nefes darlığı belirtileri.",
+  "reportDate": "2024-03-13",
+  "laborantHospitalId": "45678"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 5
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52319",
+  "patientId": "56789012345",
+  "diagnosisTitle": "Bronşit",
+  "diagnosisDetails": "Öksürük ve balgam belirtileri.",
+  "reportDate": "2024-03-14",
+  "laborantHospitalId": "56789"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 6
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52320",
+  "patientId": "67890123456",
+  "diagnosisTitle": "Migren",
+  "diagnosisDetails": "Şiddetli baş ağrısı belirtileri.",
+  "reportDate": "2024-03-15",
+  "laborantHospitalId": "67890"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 7
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52321",
+  "patientId": "78901234567",
+  "diagnosisTitle": "Diyabet",
+  "diagnosisDetails": "Yüksek kan şekeri belirtileri.",
+  "reportDate": "2024-03-16",
+  "laborantHospitalId": "78901"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 8
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52322",
+  "patientId": "89012345678",
+  "diagnosisTitle": "Romatizma",
+  "diagnosisDetails": "Eklem ağrısı ve şişlik belirtileri.",
+  "reportDate": "2024-03-17",
+  "laborantHospitalId": "89012"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 9
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52323",
+  "patientId": "90123456789",
+  "diagnosisTitle": "Gastrit",
+  "diagnosisDetails": "Mide ağrısı ve hazımsızlık belirtileri.",
+  "reportDate": "2024-03-18",
+  "laborantHospitalId": "90123"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 10
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52324",
+  "patientId": "01234567890",
+  "diagnosisTitle": "Anemi",
+  "diagnosisDetails": "Yorgunluk ve halsizlik belirtileri.",
+  "reportDate": "2024-03-19",
+  "laborantHospitalId": "01234"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 11
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52325",
+  "patientId": "12345678901",
+  "diagnosisTitle": "Hipertansiyon",
+  "diagnosisDetails": "Yüksek tansiyon belirtileri.",
+  "reportDate": "2024-03-20",
+  "laborantHospitalId": "12345"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 12
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52326",
+  "patientId": "23456789012",
+  "diagnosisTitle": "Kanser",
+  "diagnosisDetails": "Lösemi teşhisi.",
+  "reportDate": "2024-03-21",
+  "laborantHospitalId": "23456"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 13
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52327",
+  "patientId": "34567890123",
+  "diagnosisTitle": "Tüberküloz",
+  "diagnosisDetails": "Akciğer enfeksiyonu belirtileri.",
+  "reportDate": "2024-03-22",
+  "laborantHospitalId": "34567"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 14
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52328",
+  "patientId": "45678901234",
+  "diagnosisTitle": "Çölyak",
+  "diagnosisDetails": "Gluten hassasiyeti belirtileri.",
+  "reportDate": "2024-03-23",
+  "laborantHospitalId": "45678"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 15
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52329",
+  "patientId": "56789012345",
+  "diagnosisTitle": "Parkinson",
+  "diagnosisDetails": "Titreme ve hareket zorluğu belirtileri.",
+  "reportDate": "2024-03-24",
+  "laborantHospitalId": "56789"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 16
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52330",
+  "patientId": "67890123456",
+  "diagnosisTitle": "Demans",
+  "diagnosisDetails": "Hafıza kaybı belirtileri.",
+  "reportDate": "2024-03-25",
+  "laborantHospitalId": "67890"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 17
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52331",
+  "patientId": "78901234567",
+  "diagnosisTitle": "Kızamık",
+  "diagnosisDetails": "Ateş ve döküntü belirtileri.",
+  "reportDate": "2024-03-26",
+  "laborantHospitalId": "78901"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 18
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52332",
+  "patientId": "89012345678",
+  "diagnosisTitle": "Suçiçeği",
+  "diagnosisDetails": "Kaşıntılı döküntü belirtileri.",
+  "reportDate": "2024-03-27",
+  "laborantHospitalId": "89012"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 19
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52333",
+  "patientId": "90123456789",
+  "diagnosisTitle": "Menenjit",
+  "diagnosisDetails": "Baş ağrısı ve ateş belirtileri.",
+  "reportDate": "2024-03-28",
+  "laborantHospitalId": "90123"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Report 20
+POST http://localhost:8080/api/reports
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="report"
+Content-Type: application/json
+
+{
+  "fileNumber": "52334",
+  "patientId": "01234567890",
+  "diagnosisTitle": "Hepatit",
+  "diagnosisDetails": "Karaciğer iltihabı belirtileri.",
+  "reportDate": "2024-03-29",
+  "laborantHospitalId": "01234"
+}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
+Content-Type: image/png
+
+< /C:/Users/Berk/Desktop/Screenshot_1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

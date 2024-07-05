@@ -1,9 +1,21 @@
 package com.example.laboratoryreportsystem.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import java.util.Date;
+import lombok.*;
 
+import java.util.Date;
+import java.util.Optional;
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+
 public class Report {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,79 +27,16 @@ public class Report {
     private String diagnosisDetails;
     private Date reportDate;
 
-    @OneToOne
-    @JoinColumn(name = "image_id")
-    private ImageData reportImage;
-    @ManyToOne
+
+    @Lob
+    private String imageBase64;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "laborant_id")
     private Laborant laborant;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFileNumber() {
-        return fileNumber;
-    }
-
-    public void setFileNumber(String fileNumber) {
-        this.fileNumber = fileNumber;
-    }
-
-    public String getDiagnosisTitle() {
-        return diagnosisTitle;
-    }
-
-    public void setDiagnosisTitle(String diagnosisTitle) {
-        this.diagnosisTitle = diagnosisTitle;
-    }
-
-    public String getDiagnosisDetails() {
-        return diagnosisDetails;
-    }
-
-    public void setDiagnosisDetails(String diagnosisDetails) {
-        this.diagnosisDetails = diagnosisDetails;
-    }
-
-    public Date getReportDate() {
-        return reportDate;
-    }
-
-    public void setReportDate(Date reportDate) {
-        this.reportDate = reportDate;
-    }
-
-    public ImageData getReportImage() {
-        return reportImage;
-    }
-
-    public void setReportImage(ImageData reportImage) {
-        this.reportImage = reportImage;
-    }
-
-    public Laborant getLaborant() {
-        return laborant;
-    }
-
-    public void setLaborant(Laborant laborant) {
-        this.laborant = laborant;
-    }
-
-    public Patient getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
 }

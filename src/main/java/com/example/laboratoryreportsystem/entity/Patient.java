@@ -1,8 +1,18 @@
 package com.example.laboratoryreportsystem.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import java.util.List;
+import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "patient")
 public class Patient {
@@ -13,48 +23,13 @@ public class Patient {
     private String lastName;
     private String patientId; // TC Kimlik Numarası
 
-    @OneToMany(mappedBy = "patient")
-    private List<Report> reports;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
+    public Patient(String firstName, String lastName, String patientId) {
         this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(String patientId) {
         this.patientId = patientId;
     }
 
-    public List<Report> getReports() {
-        return reports;
-    }
+    @OneToMany(mappedBy = "patient")
+    private List<Report> reports;
 
-    public void setReports(List<Report> reports) {
-        this.reports = reports;
-    }
-
-    // Getters and setters
 }

@@ -1,0 +1,99 @@
+### Create Laborant 1
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Alex",
+  "lastName": "Taylor",
+  "hospitalId": "12345"
+}
+
+### Create Laborant 2
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Lisa",
+  "lastName": "Thomas",
+  "hospitalId": "23456"
+}
+
+### Create Laborant 3
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "James",
+  "lastName": "Moore",
+  "hospitalId": "34567"
+}
+
+### Create Laborant 4
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Anna",
+  "lastName": "Jackson",
+  "hospitalId": "45678"
+}
+
+### Create Laborant 5
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Robert",
+  "lastName": "Martin",
+  "hospitalId": "56789"
+}
+
+### Create Laborant 6
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Sophia",
+  "lastName": "Lee",
+  "hospitalId": "67890"
+}
+
+### Create Laborant 7
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Matthew",
+  "lastName": "Perez",
+  "hospitalId": "78901"
+}
+
+### Create Laborant 8
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Ava",
+  "lastName": "Thompson",
+  "hospitalId": "89012"
+}
+
+### Create Laborant 9
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Joshua",
+  "lastName": "Harris",
+  "hospitalId": "90123"
+}
+
+### Create Laborant 10
+POST http://localhost:8080/api/laborants
+Content-Type: application/json
+
+{
+  "firstName": "Olivia",
+  "lastName": "Martinez",
+  "hospitalId": "01234"
+}
