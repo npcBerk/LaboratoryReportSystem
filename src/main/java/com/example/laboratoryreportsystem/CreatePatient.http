@@ -1,0 +1,99 @@
+### Create Patient 1
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "patientId": "12345678901"
+}
+
+### Create Patient 2
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "patientId": "23456789012"
+}
+
+### Create Patient 3
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Michael",
+  "lastName": "Johnson",
+  "patientId": "34567890123"
+}
+
+### Create Patient 4
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Emily",
+  "lastName": "Davis",
+  "patientId": "45678901234"
+}
+
+### Create Patient 5
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Chris",
+  "lastName": "Brown",
+  "patientId": "56789012345"
+}
+
+### Create Patient 6
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Jessica",
+  "lastName": "Wilson",
+  "patientId": "67890123456"
+}
+
+### Create Patient 7
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Daniel",
+  "lastName": "Martinez",
+  "patientId": "78901234567"
+}
+
+### Create Patient 8
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Sarah",
+  "lastName": "Lee",
+  "patientId": "89012345678"
+}
+
+### Create Patient 9
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "David",
+  "lastName": "White",
+  "patientId": "90123456789"
+}
+
+### Create Patient 10
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "firstName": "Laura",
+  "lastName": "Green",
+  "patientId": "01234567890"
+}

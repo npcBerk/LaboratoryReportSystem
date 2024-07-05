@@ -1,8 +1,20 @@
 package com.example.laboratoryreportsystem.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import java.util.List;
+import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Laborant {
     @Id
@@ -12,47 +24,13 @@ public class Laborant {
     private String lastName;
     private String hospitalId; // 7 Haneli
 
-    @OneToMany(mappedBy = "laborant")
-    private List<Report> reports;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
+    public Laborant(String firstName, String lastName, String hospitalId) {
         this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getHospitalId() {
-        return hospitalId;
-    }
-
-    public void setHospitalId(String hospitalId) {
         this.hospitalId = hospitalId;
     }
 
-    public List<Report> getReports() {
-        return reports;
-    }
+    @OneToMany(mappedBy = "laborant")
+    private List<Report> reports;
 
-    public void setReports(List<Report> reports) {
-        this.reports = reports;
-    }
 }

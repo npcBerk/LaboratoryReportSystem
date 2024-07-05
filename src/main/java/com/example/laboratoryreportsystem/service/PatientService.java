@@ -2,6 +2,8 @@ package com.example.laboratoryreportsystem.service;
 
 import com.example.laboratoryreportsystem.entity.Patient;
 import com.example.laboratoryreportsystem.repository.PatientRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,8 @@ public class PatientService {
     }
 
     public Patient getPatientById(Long id) {
-        return patientRepository.findById(id).orElse(null);
+        return patientRepository.findById(id)
+                .orElseThrow(EntityNotFoundException::new);
     }
 
     public Patient getPatientByPatientId(String patientId) {
@@ -32,11 +35,41 @@ public class PatientService {
         return patientRepository.findByLastNameContaining(lastName);
     }
 
+    @Transactional
     public Patient savePatient(Patient patient) {
+        if (patientRepository.existsByPatientId(patient.getPatientId())) {
+            throw new IllegalArgumentException("Patient with ID " + patient.getPatientId() + " already exists.");
+        }
         return patientRepository.save(patient);
     }
 
+    @Transactional
+    public void updatePatient(Long id, String firstName, String lastName, String patientId) {
+        Patient patient = patientRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Patient with ID " + id + " not found."));
+
+        if (firstName != null && !firstName.isEmpty() && !firstName.equals(patient.getFirstName())) {
+            patient.setFirstName(firstName);
+        }
+        if (lastName != null && !lastName.isEmpty() && !lastName.equals(patient.getLastName())) {
+            patient.setLastName(lastName);
+        }
+        if (patientId != null && !patientId.isEmpty() && !patientId.equals(patient.getPatientId())) {
+            if (patientRepository.existsByPatientId(patientId)) {
+                throw new IllegalArgumentException("Patient with ID " + patientId + " already exists.");
+            }
+            patient.setPatientId(patientId);
+        }
+
+        patientRepository.save(patient);
+    }
+
+    @Transactional
     public void deletePatient(Long id) {
+        if (!patientRepository.existsById(id)) {
+            throw new IllegalArgumentException("Patient with ID " + id + " does not exist.");
+        }
         patientRepository.deleteById(id);
     }
+
+
 }

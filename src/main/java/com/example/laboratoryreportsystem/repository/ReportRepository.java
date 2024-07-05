@@ -13,4 +13,5 @@ public interface ReportRepository extends JpaRepository<Report, Long> {
     List<Report> findByLaborantFirstNameContaining(String firstName);
     List<Report> findByLaborantLastNameContaining(String lastName);
     List<Report> findByReportDateOrderByReportDate(Date reportDate);
+    boolean existsByFileNumber(String fileNumber);
 }
