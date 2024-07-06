@@ -21,7 +21,6 @@ public class PatientDTOMapper {
                         .stream()
                         .map(Report::getFileNumber)
                         .toList()
-                        //.collect(Collectors.toList())
         );
     }
 

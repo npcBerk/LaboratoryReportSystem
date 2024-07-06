@@ -111,30 +111,6 @@ public class ReportService {
         reportRepository.save(report);
     }
 
-    /*public void updateReport(Long id, String fileNumber, String patientId, String diagnosisTitle, String diagnosisDetails, Date reportDate, String laborantHospitalId) {
-        Report report = reportRepository.findById(id).orElseThrow(() -> new IllegalStateException("Report not found"));
-
-        if (fileNumber != null && !fileNumber.isEmpty() && !fileNumber.equals(report.getFileNumber())) {
-            report.setFileNumber(fileNumber);
-        }
-        if (patientId != null && !patientId.isEmpty() && !patientId.equals(report.getPatient().getPatientId())) {
-            report.getPatient().setPatientId(patientId);
-        }
-        if (diagnosisTitle != null && !diagnosisTitle.isEmpty() && !diagnosisTitle.equals(report.getDiagnosisTitle())) {
-            report.setDiagnosisTitle(diagnosisTitle);
-        }
-        if (diagnosisDetails != null && !diagnosisDetails.isEmpty() && !diagnosisDetails.equals(report.getDiagnosisDetails())) {
-            report.setDiagnosisDetails(diagnosisDetails);
-        }
-        if (reportDate != null && !reportDate.equals(report.getReportDate())) {
-            report.setReportDate(reportDate);
-        }
-        if (laborantHospitalId != null && !laborantHospitalId.isEmpty() && !laborantHospitalId.equals(report.getLaborant().getHospitalId())) {
-            report.getLaborant().setHospitalId(laborantHospitalId);
-        }
-
-        reportRepository.save(report);
-    }*/
 
     @Transactional
     public void deleteReport(Long id) {

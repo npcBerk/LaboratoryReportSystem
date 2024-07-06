@@ -25,10 +25,6 @@ public class ReportDTOMapper {
     }
 
     public ReportResponse reportToResponse(Report report) {
-        /*if (report.getImageBase64()==null) {
-            report.setImageBase64(" ");
-        }*/
-
         return new ReportResponse(
                 report.getId(),
                 report.getFileNumber(),

@@ -17,7 +17,7 @@ public class Laborant {
     private Long id;
     private String firstName;
     private String lastName;
-    private String hospitalId; // 7 Haneli
+    private String hospitalId;
 
     public Laborant(String firstName, String lastName, String hospitalId) {
         this.firstName = firstName;
