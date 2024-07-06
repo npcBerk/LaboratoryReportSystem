@@ -19,11 +19,20 @@
 2. **Veritabanı Kurulumu**
 
    PostgreSQL üzerinde bir veritabanı oluşturun:
+   ```sh
+   psql -U postgres
+    ```
+
+   Sonrasında PostgreSQL şifrenizi girin. Yazdıklarınız komut satırında gözükmeyecek, ama arka planda yazılıyor.
+
+   Şifreyi girdikten sonra aşağıdaki SQL sorgusunu yazabilirsiniz.
+
+   **Not:** Şifre kısmına kendi sunucu şifrenizi giriniz!
 
     ```sql
     CREATE DATABASE laboratory_report_system;
-    CREATE USER lab_user WITH ENCRYPTED PASSWORD 'password';
-    GRANT ALL PRIVILEGES ON DATABASE laboratory_report_system TO lab_user;
+    CREATE USER postgres WITH ENCRYPTED PASSWORD '/Your Password/';
+    GRANT ALL PRIVILEGES ON DATABASE laboratory_report_system TO postgres;
     ```
 
 3. **Yapılandırma Dosyasını Güncelleyin**
@@ -34,8 +43,8 @@
     spring.application.name=Laboratory Report System
 
     spring.datasource.url=jdbc:postgresql://localhost:5432/laboratory_report_system
-    spring.datasource.username=lab_user
-    spring.datasource.password=password
+    spring.datasource.username="Your username"
+    spring.datasource.password="Your password"
 
     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
     spring.jpa.hibernate.ddl-auto=update
@@ -48,13 +57,13 @@
 4. **Bağımlılıkları Yükleyin ve Projeyi Derleyin**
 
     ```sh
-    mvn clean install
+    mvnw clean install
     ```
 
 5. **Uygulamayı Çalıştırın**
 
     ```sh
-    mvn spring-boot:run
+    mvnw spring-boot:run
     ```
     
 6. **HTTP Dosyalarını Kullanarak Veri Kaydedin**
