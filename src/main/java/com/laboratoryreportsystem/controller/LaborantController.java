@@ -83,7 +83,7 @@ public class LaborantController {
             @RequestParam(required = false) String hospitalId) {
         try {
             laborantService.updateLaborant(id, firstName, lastName, hospitalId);
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.ok(laborantDTOMapper.laborantToResponse(laborantService.getLaborantById(id)));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
@@ -93,7 +93,7 @@ public class LaborantController {
     public ResponseEntity<?> deleteLaborant(@PathVariable Long id) {
         try {
             laborantService.deleteLaborant(id);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(HttpStatus.GONE);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }

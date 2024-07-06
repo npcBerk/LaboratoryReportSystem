@@ -7,6 +7,7 @@ import com.laboratoryreportsystem.repository.ReportRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -71,13 +72,9 @@ public class ReportService {
         return reportRepository.save(report);
     }
 
-    /*//@Transactional
-    public void updateReport(Report report) {
-        Report retrievedReport = reportRepository.findById(report.getId())
-                .orElseThrow(() -> new EntityNotFoundException("Report not found"));
-        retrievedReport.updateFrom(report);
-        reportRepository.save(retrievedReport);
-    }*/
+    public List<Report> getAllReportsSortedByDate(Sort.Direction direction) {
+        return reportRepository.findAll(Sort.by(direction, "reportDate"));
+    }
 
     @Transactional
     public void updateReport(Long id, String fileNumber, String patientId, String diagnosisTitle, String diagnosisDetails, Date reportDate, String laborantHospitalId) {

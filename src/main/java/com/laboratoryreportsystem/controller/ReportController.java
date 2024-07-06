@@ -7,6 +7,7 @@ import com.laboratoryreportsystem.entity.Report;
 import com.laboratoryreportsystem.service.ReportService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -41,6 +42,14 @@ public class ReportController {
     public ResponseEntity<ReportResponse> getReportById(@PathVariable Long id) {
         Report report = reportService.getReportById(id);
         return ResponseEntity.ok(reportDTOMapper.reportToResponse(report));
+    }
+
+    @GetMapping("/sorted-by-date")
+    public ResponseEntity<List<ReportResponse>> getAllReportsSortedByDate(@RequestParam(defaultValue = "ASC") String direction) {
+        Sort.Direction sortDirection = Sort.Direction.fromString(direction.toUpperCase());
+        List<Report> sortedReports = reportService.getAllReportsSortedByDate(sortDirection);
+        List<ReportResponse> response = reportDTOMapper.reportListToResponse(sortedReports);
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/search")
@@ -79,50 +88,6 @@ public class ReportController {
         return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reports));
     }
 
-    /*@GetMapping("/search")
-    public ResponseEntity<List<ReportResponse>> searchReports(
-            @RequestParam(required = false) String patientFirstName,
-            @RequestParam(required = false) String patientLastName,
-            @RequestParam(required = false) String patientId,
-            @RequestParam(required = false) String laborantFirstName,
-            @RequestParam(required = false) String laborantLastName,
-            @RequestParam(required = false) Date reportDate) {
-        if (patientFirstName != null) {
-            List<Report> reports = reportService.searchReportsByPatientFirstName(patientFirstName);
-            return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reports));
-        }
-        if (patientLastName != null) {
-            List<Report> reports = reportService.searchReportsByPatientLastName(patientLastName);
-            return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reports));
-        }
-        if (patientId != null) {
-            List<Report> reports = reportService.searchReportsByPatientId(patientId);
-            return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reports));
-        }
-        if (laborantFirstName != null) {
-            List<Report> reports = reportService.searchReportsByLaborantFirstName(laborantFirstName);
-            return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reports));
-        }
-        if (laborantLastName != null) {
-            List<Report> reports = reportService.searchReportsByLaborantLastName(laborantLastName);
-            return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reports));
-        }
-        if (reportDate != null) {
-            List<Report> reports = reportService.getReportsByDate(reportDate);
-            return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reports));
-        }
-        return ResponseEntity.ok(reportDTOMapper.reportListToResponse(reportService.getAllReports()));
-    }*/
-
-    /*@PostMapping
-    public ResponseEntity<ReportResponse> createReport(
-            @RequestBody ReportRequest request) {
-        Report toSave = reportDTOMapper.requestToReport(request);
-        ReportResponse saved =reportDTOMapper.reportToResponse(
-                reportService.saveReport(toSave));
-        return ResponseEntity.created(URI.create("/api/reports/" + saved.id())).body(saved);
-    }*/
-
     @PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<?> createReport(@RequestPart("report") String reportJson, @RequestPart("image") MultipartFile file) {
         try {
@@ -142,34 +107,6 @@ public class ReportController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
-    /*@PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
-    public ResponseEntity<ReportResponse> createReport(
-            @RequestPart("report") String reportJson,
-            @RequestPart("image") MultipartFile file) throws IOException {
-
-        // JSON String'i ReportRequest nesnesine dönüştürme
-        ObjectMapper objectMapper = new ObjectMapper();
-        ReportRequest request = objectMapper.readValue(reportJson, ReportRequest.class);
-
-        // Report nesnesini oluşturma
-        Report toSave = reportDTOMapper.requestToReport(request);
-        String imageBase64 = Base64.getEncoder().encodeToString(file.getBytes());
-        toSave.setImageBase64(imageBase64);
-
-        // Report kaydetme
-        ReportResponse saved = reportDTOMapper.reportToResponse(reportService.saveReport(toSave));
-        return ResponseEntity.created(URI.create("/api/reports/" + saved.id())).body(saved);
-    }*/
-
-    /*@PutMapping("/{id}")
-    public ResponseEntity<Void> updateReport(
-            @PathVariable Long id,
-            @RequestBody ReportRequest reportRequest) {
-        Report report = reportDTOMapper.requestToReport(reportRequest);
-        report.setId(id);
-        reportService.updateReport(report);
-        return ResponseEntity.noContent().build();
-    }*/
     @PutMapping("/{id}")
     public ResponseEntity<?> updateReport(
             @PathVariable Long id,
@@ -177,11 +114,11 @@ public class ReportController {
             @RequestParam(required = false) String patientId,
             @RequestParam(required = false) String diagnosisTitle,
             @RequestParam(required = false) String diagnosisDetails,
-            @RequestParam(required = false) Date reportDate,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date reportDate,
             @RequestParam(required = false) String laborantHospitalId) {
         try {
             reportService.updateReport(id, fileNumber, patientId, diagnosisTitle, diagnosisDetails, reportDate, laborantHospitalId);
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.ok(reportDTOMapper.reportToResponse(reportService.getReportById(id)));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
@@ -191,7 +128,7 @@ public class ReportController {
     public ResponseEntity<?> deleteReport(@PathVariable Long id) {
         try {
             reportService.deleteReport(id);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(HttpStatus.GONE);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }

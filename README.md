@@ -66,12 +66,22 @@
     mvnw spring-boot:run
     ```
     
-6. **HTTP Dosyalarını Kullanarak Veri Kaydedin**
+6. **HTTP Dosyalarını Kullanarak Hazır Verileri Kaydedebilirsiniz**
 
-    `src/main/java/com/laboratoryreportsystem` klasöründeki HTTP dosyalarını kullanarak veritabanına veri kaydedebilirsiniz. Bu dosyalar, uygulamanın API isteklerini kolayca test etmenizi sağlar. Örnek dosyalar şunlardır:
+    `src/main/java/com/laboratoryreportsystem` klasöründeki HTTP dosyalarını kullanarak veritabanına veri kaydedebilirsiniz. 
+     Bu dosyalar, uygulamanın API isteklerini kolayca test etmenizi sağlar. Örnek dosyalar şunlardır:
     - `CreateLaborant.http`
     - `CreatePatient.http`
-    - `CreateReport.http`
+    - `CreateReport.http`**(Rapor oluştururken görselin dizini değiştirmelisiniz.)**
+    
+
+7. **Kaydettiğiniz Verileri Test Edebilirsiniz**
+
+    - `DeleteRequests.http`
+    - `GETMethods.http`
+    - `Search.http`
+    - `UpdateRequest.http`
+
 
 ## Teknik Seçimler ve Gerekçeleri
 

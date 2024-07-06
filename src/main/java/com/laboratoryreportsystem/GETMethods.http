@@ -1,0 +1,36 @@
+### Sorted Report List by Date
+GET /api/reports/sorted-by-date?direction=DESC HTTP/1.1
+Host: localhost:8080
+
+### Sorted Report List by Date
+GET /api/reports/sorted-by-date HTTP/1.1
+Host: localhost:8080
+
+### Getting Image of Report
+GET /api/reports/4/image HTTP/1.1
+Host: localhost:8080
+
+### GET Reports
+GET /api/reports HTTP/1.1
+Host: localhost:8080
+
+### GET Patients
+GET /api/patients HTTP/1.1
+Host: localhost:8080
+
+### GET Laborants
+GET /api/laborants HTTP/1.1
+Host: localhost:8080
+
+### GET Report by id
+GET /api/reports/5 HTTP/1.1
+Host: localhost:8080
+
+### GET Patient by id
+GET /api/patients/5 HTTP/1.1
+Host: localhost:8080
+
+### GET Laborant by id
+GET /api/laborants/5 HTTP/1.1
+Host: localhost:8080
+

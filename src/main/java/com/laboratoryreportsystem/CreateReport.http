@@ -12,7 +12,7 @@ Content-Type: application/json
   "diagnosisTitle": "Pnömotoraks",
   "diagnosisDetails": "Sol akciğer lobunda pnömotoraks gözlendi.",
   "reportDate": "2024-03-10",
-  "laborantHospitalId": "12345"
+  "laborantHospitalId": "1234567"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -35,7 +35,7 @@ Content-Type: application/json
   "diagnosisTitle": "Grip",
   "diagnosisDetails": "Soğuk algınlığı belirtileri.",
   "reportDate": "2024-03-11",
-  "laborantHospitalId": "23456"
+  "laborantHospitalId": "2345678"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -58,7 +58,7 @@ Content-Type: application/json
   "diagnosisTitle": "Alerji",
   "diagnosisDetails": "Polen alerjisi belirtileri.",
   "reportDate": "2024-03-12",
-  "laborantHospitalId": "34567"
+  "laborantHospitalId": "3456789"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -81,7 +81,7 @@ Content-Type: application/json
   "diagnosisTitle": "Astım",
   "diagnosisDetails": "Nefes darlığı belirtileri.",
   "reportDate": "2024-03-13",
-  "laborantHospitalId": "45678"
+  "laborantHospitalId": "4567890"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -104,7 +104,7 @@ Content-Type: application/json
   "diagnosisTitle": "Bronşit",
   "diagnosisDetails": "Öksürük ve balgam belirtileri.",
   "reportDate": "2024-03-14",
-  "laborantHospitalId": "56789"
+  "laborantHospitalId": "5678901"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -127,7 +127,7 @@ Content-Type: application/json
   "diagnosisTitle": "Migren",
   "diagnosisDetails": "Şiddetli baş ağrısı belirtileri.",
   "reportDate": "2024-03-15",
-  "laborantHospitalId": "67890"
+  "laborantHospitalId": "6789012"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -150,7 +150,7 @@ Content-Type: application/json
   "diagnosisTitle": "Diyabet",
   "diagnosisDetails": "Yüksek kan şekeri belirtileri.",
   "reportDate": "2024-03-16",
-  "laborantHospitalId": "78901"
+  "laborantHospitalId": "7890123"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -173,7 +173,7 @@ Content-Type: application/json
   "diagnosisTitle": "Romatizma",
   "diagnosisDetails": "Eklem ağrısı ve şişlik belirtileri.",
   "reportDate": "2024-03-17",
-  "laborantHospitalId": "89012"
+  "laborantHospitalId": "8901234"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -196,7 +196,7 @@ Content-Type: application/json
   "diagnosisTitle": "Gastrit",
   "diagnosisDetails": "Mide ağrısı ve hazımsızlık belirtileri.",
   "reportDate": "2024-03-18",
-  "laborantHospitalId": "90123"
+  "laborantHospitalId": "9012345"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -219,7 +219,7 @@ Content-Type: application/json
   "diagnosisTitle": "Anemi",
   "diagnosisDetails": "Yorgunluk ve halsizlik belirtileri.",
   "reportDate": "2024-03-19",
-  "laborantHospitalId": "01234"
+  "laborantHospitalId": "0123456"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -242,7 +242,7 @@ Content-Type: application/json
   "diagnosisTitle": "Hipertansiyon",
   "diagnosisDetails": "Yüksek tansiyon belirtileri.",
   "reportDate": "2024-03-20",
-  "laborantHospitalId": "12345"
+  "laborantHospitalId": "1234567"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -265,7 +265,7 @@ Content-Type: application/json
   "diagnosisTitle": "Kanser",
   "diagnosisDetails": "Lösemi teşhisi.",
   "reportDate": "2024-03-21",
-  "laborantHospitalId": "23456"
+  "laborantHospitalId": "2345678"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -288,7 +288,7 @@ Content-Type: application/json
   "diagnosisTitle": "Tüberküloz",
   "diagnosisDetails": "Akciğer enfeksiyonu belirtileri.",
   "reportDate": "2024-03-22",
-  "laborantHospitalId": "34567"
+  "laborantHospitalId": "3456789"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -311,7 +311,7 @@ Content-Type: application/json
   "diagnosisTitle": "Çölyak",
   "diagnosisDetails": "Gluten hassasiyeti belirtileri.",
   "reportDate": "2024-03-23",
-  "laborantHospitalId": "45678"
+  "laborantHospitalId": "4567890"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -334,7 +334,7 @@ Content-Type: application/json
   "diagnosisTitle": "Parkinson",
   "diagnosisDetails": "Titreme ve hareket zorluğu belirtileri.",
   "reportDate": "2024-03-24",
-  "laborantHospitalId": "56789"
+  "laborantHospitalId": "5678901"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -357,7 +357,7 @@ Content-Type: application/json
   "diagnosisTitle": "Demans",
   "diagnosisDetails": "Hafıza kaybı belirtileri.",
   "reportDate": "2024-03-25",
-  "laborantHospitalId": "67890"
+  "laborantHospitalId": "6789012"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -380,7 +380,7 @@ Content-Type: application/json
   "diagnosisTitle": "Kızamık",
   "diagnosisDetails": "Ateş ve döküntü belirtileri.",
   "reportDate": "2024-03-26",
-  "laborantHospitalId": "78901"
+  "laborantHospitalId": "7890123"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -403,7 +403,7 @@ Content-Type: application/json
   "diagnosisTitle": "Suçiçeği",
   "diagnosisDetails": "Kaşıntılı döküntü belirtileri.",
   "reportDate": "2024-03-27",
-  "laborantHospitalId": "89012"
+  "laborantHospitalId": "8901234"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -426,7 +426,7 @@ Content-Type: application/json
   "diagnosisTitle": "Menenjit",
   "diagnosisDetails": "Baş ağrısı ve ateş belirtileri.",
   "reportDate": "2024-03-28",
-  "laborantHospitalId": "90123"
+  "laborantHospitalId": "9012345"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"
@@ -449,7 +449,7 @@ Content-Type: application/json
   "diagnosisTitle": "Hepatit",
   "diagnosisDetails": "Karaciğer iltihabı belirtileri.",
   "reportDate": "2024-03-29",
-  "laborantHospitalId": "01234"
+  "laborantHospitalId": "0123456"
 }
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="Screenshot_1.png"

@@ -1,0 +1,28 @@
+### Update Report
+PUT /api/reports/2
+    ?fileNumber=52316
+    &patientId=23456789012
+    &diagnosisTitle=Grip
+    &diagnosisDetails=Soğuk algınlığı belirtileri.
+    &reportDate=2024-03-11
+    &laborantHospitalId=34567
+    HTTP/1.1
+Host: localhost:8080
+
+
+### Update Laborant
+PUT /api/laborants/6
+    ?firstName=Sophia
+    &lastName=Lee
+    &hospitalId=67890
+    HTTP/1.1
+Host: localhost:8080
+
+
+### Update Patient
+PUT /api/patients/4
+    ?firstName=Emily
+    &lastName=Davis
+    &patientId=45678901234
+    HTTP/1.1
+Host: localhost:8080

@@ -84,7 +84,7 @@ public class PatientController {
             @RequestParam(required = false) String patientId) {
         try {
             patientService.updatePatient(id, firstName, lastName, patientId);
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.ok(patientDTOMapper.patientToResponse(patientService.getPatientById(id)));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
@@ -93,7 +93,7 @@ public class PatientController {
     public ResponseEntity<?> deletePatient(@PathVariable Long id) {
         try {
             patientService.deletePatient(id);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(HttpStatus.GONE);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
